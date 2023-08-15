@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jovian Careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        #banner {
+          height: 360px;
+          width: 100%;
+          object-fit:cover;
+          margin-bottom: 16px;
+        }
+      </style> 
+</head>
+  <body>
+    <div class = "container">
+        <h1 class="text-center mt-2 mb-4">
+            {{company_name}} Careers
+        </h1>
+        <img src = "http://127.0.0.1:5000/static/pexels-pixabay-326576.jpg " height = "620">
+        <h1 class="text-center mt-2 mb-4">
+            About Super careers
+        </h1>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <h1 class="text-center mt-2 mb-4">
+            Open Position
+        </h1>
+        <div>
+            {% for job in jobs %}
+              {% include 'jobitem.html' %}
+            {% endfor %}
+          </div>
+        <div class="text-center mt-2 mb-4">
+            <button class="btn btn-primary btn-lg"> Contact Us</button>
+            <p class="mt-2 mb-4">
+                Copyright 2022, Sachendra
+            </p>
+        </div>
+    </div>
+
+  </body>
+</html>
