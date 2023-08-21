@@ -5,26 +5,31 @@ app = Flask(__name__)
 JOBS = [
   {
     'id': 1,
-    'title': 'Data Analyst',
+    'title': 'Data Scientist',
     'location': 'Bengaluru, India',
-    'salary': 'Rs. 10,00,000'
+    'company': "Unilever",
+    'link': 'https://careers.unilever.com/job/-/-/34155/52218401040?utm_medium=job_posting&source=linkedin.com&utm_source=linkedin.com'
   },
   {
     'id': 2,
     'title': 'Data Scientist',
-    'location': 'Delhi, India',
-    'salary': 'Rs. 15,00,000'
+    'location': 'Bengaluru, India',
+    'company': 'CRED',
+    'link':'https://www.linkedin.com/jobs/view/3691222064/?refId=c866c794-d9d0-4377-b3e6-2f7bd2afebb2&trackingId=i%2BPriCbiQk2SnlPVM9aRyQ%3D%3D'
   },
   {
     'id': 3,
-    'title': 'Frontend Engineer',
-    'location': 'Remote'
+    'title': 'Data Engineer 2',
+    'location': 'Hyderabad, India',
+    'company': 'Microsoft',
+    'link':'https://jobs.careers.microsoft.com/us/en/job/1598715/Data-Engineer-II?jobsource=linkedin'
   },
   {
     'id': 4,
-    'title': 'Backend Engineer',
-    'location': 'San Francisco, USA',
-    'salary': '$150,000'
+    'title': 'AI/ML Engineer',
+    'location': 'Bengaluru, India',
+    'company': 'Databricks',
+    'link': 'https://www.databricks.com/company/careers/support/cloud-solutions-engineer-ai-ml-dev-6616027002?gh_jid=6616027002&gh_src=fd3a492b2us&source=LinkedIn'
   }
 ]
 
@@ -34,7 +39,7 @@ JOBS = [
 def hello():
     return render_template('home.html',
                            jobs = JOBS,
-                           company_name = 'SACHENDRA')
+                           company_name = 'Sachendra')
 
 @app.route("/api/jobs")
 def list_jobs():
